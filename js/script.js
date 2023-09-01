@@ -7,7 +7,7 @@ const menu = document.querySelector(".menu-screen")
 const buttonPlay = document.querySelector(".btn-play")
 
 const audio = new Audio('../assets/sim.mp3')
-const audioPinga = new Audio('../assets/nao.mp3')
+const audioGameOver = new Audio('../assets/nao.mp3')
 
 const size = 30
 
@@ -144,7 +144,7 @@ const checkCollision = () => {
 }
 const gameOver = () => {
     direction = undefined
-    audioPinga.play()
+    audioGameOver.play()
     menu.style.display = "flex"
     finalScore.innerText = score.innerText
     canvas.style.filter = "blur(3px)"
