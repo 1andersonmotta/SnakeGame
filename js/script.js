@@ -15,7 +15,6 @@ const initialPosition = { x: 270, y: 240 };
 
 let snake = [initialPosition]
 
-
 const incrementScore = () => {
     score.innerText = +score.innerText + 10
 }
@@ -42,6 +41,7 @@ const food = {
     y: randomPosition(),
     color: randomColor()
 }
+
 let direction, loopId
 
 const drawFood = () => {
@@ -70,7 +70,6 @@ const moveSnake = () => {
     if (!direction) return
 
     const head = snake[snake.length - 1]
-
     snake.shift()
 
     if (direction == "right") {
